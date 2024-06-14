@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<pages:PopupPage
+    x:Class="PrismPopupsIssue.PopupPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:pages="clr-namespace:Mopups.Pages;assembly=Mopups"
+    xmlns:prismPopupsIssue="clr-namespace:PrismPopupsIssue"
+    Padding="40"
+    x:DataType="prismPopupsIssue:PopupPageViewModel"
+    BackgroundColor="#80000000">
+    <VerticalStackLayout
+        BackgroundColor="White"
+        Spacing="8"
+        VerticalOptions="Center">
+        <Label
+            FontAttributes="Bold"
+            FontSize="Header"
+            HorizontalOptions="Center"
+            Text="Hello from popup page" />
+        <Button
+            Command="{Binding GoBackCommand, Mode=OneTime}"
+            HorizontalOptions="Center"
+            Text="Go Back" />
+    </VerticalStackLayout>
+</pages:PopupPage>
