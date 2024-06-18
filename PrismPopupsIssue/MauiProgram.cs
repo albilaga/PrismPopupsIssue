@@ -17,6 +17,7 @@ public static class MauiProgram
                     {
                         containerRegistry.RegisterForNavigation<MainPage>();
                         containerRegistry.RegisterForNavigation<PopupPage>();
+                        containerRegistry.RegisterDialog<PopupView,PopupViewModel>();
                     })
                     .CreateWindow(navigationService =>
                         navigationService.NavigateAsync($"/{nameof(NavigationPage)}/{nameof(MainPage)}"));

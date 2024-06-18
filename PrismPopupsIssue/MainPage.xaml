@@ -14,5 +14,9 @@
             Command="{Binding OpenPopupFromMopupsCommand, Mode=OneTime}"
             HorizontalOptions="Center"
             Text="Open Popup From Mopups" />
+        <Button
+            Command="{Binding OpenPopupDialogCommand, Mode=OneTime}"
+            HorizontalOptions="Center"
+            Text="Open Popup From Dialog" />
     </VerticalStackLayout>
 </ContentPage>
