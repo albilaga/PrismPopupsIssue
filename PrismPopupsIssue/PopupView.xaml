@@ -4,12 +4,19 @@
     x:Class="PrismPopupsIssue.PopupView"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:animations="clr-namespace:Mopups.Animations;assembly=Mopups"
     xmlns:prismPopupsIssue="clr-namespace:PrismPopupsIssue"
+    xmlns:xaml="http://prismlibrary.com"
     Padding="40"
     x:DataType="prismPopupsIssue:PopupViewModel"
+    xaml:DialogLayout.CloseOnBackgroundTapped="True"
+    xaml:PopupDialogLayout.HasSystemPadding="False"
     BackgroundColor="#80000000"
     HorizontalOptions="Fill"
-    VerticalOptions="End">
+    VerticalOptions="Fill">
+    <xaml:PopupDialogLayout.Animation>
+        <animations:MoveAnimation PositionIn="Top" PositionOut="Bottom" />
+    </xaml:PopupDialogLayout.Animation>
     <VerticalStackLayout
         BackgroundColor="White"
         Spacing="8"
